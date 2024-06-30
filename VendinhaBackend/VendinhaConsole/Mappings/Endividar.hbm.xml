@@ -11,8 +11,8 @@
 			</generator>
 		</id>
 		<property name="Data"		type="DateTime"		/>
-		<many-to-one name="Aluno"
-					 column="alunoid"
+		<many-to-one name="Cliente"
+					 column="clienteid"
 					 fetch="join"
 					 lazy="false"
 				 ></many-to-one>

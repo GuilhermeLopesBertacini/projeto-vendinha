@@ -4,8 +4,8 @@ export function listarClientes(pesquisa, page, pageSize) {
     var data = page == 0 ? "" : `page=${page}&pageSize=${pageSize}`;
     // PROMISE
     var response = pesquisa ?
-    fetch(URL_API + "/api/aluno?pesquisa=" + pesquisa + "&" + data) :
-    fetch(URL_API + "/api/aluno?" + data);
+    fetch(URL_API + "/api/cliente?pesquisa=" + pesquisa + "&" + data) :
+    fetch(URL_API + "/api/cliente?" + data);
 
     return response;
 }

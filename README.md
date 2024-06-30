@@ -5,5 +5,5 @@ Este código está em processo de aprimoramento. Estou disponível para contato 
 # Execução do projeto:
 - Para executá-lo em sua máquina deve seguir os seguintes passos:
 - Altere a connection string do mapeamento da biblioteca NHibernate, para que conecte com o banco de dados de maneira correta;
-- Execute o projeto C#;
-- No console, navegue ao diretório "VendinhaReact" ("cd VendinhaReact") e execute o projeto react ("npm run dev").
+- Execute o projeto VendinhaConsole.sln;
+- No console, navegue ao diretório "VendinhaReact" ("cd VendinhaReact"), instale ("npm install") e execute o projeto react ("npm run dev").

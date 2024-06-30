@@ -116,5 +116,31 @@ namespace Escola.Api.Controllers
             };
             return Ok();
         }
+
+        [HttpPost]
+[Route("api/dividas")]
+public IActionResult CriarDivida([FromBody] Divida divida)
+{
+    if (divida == null)
+    {
+        return BadRequest("Dados da dívida não podem ser nulos");
+    }
+
+    // Verificação de campos obrigatórios
+    if (divida.Valor == null || divida.Situacao == null || divida.DataCriacao == null || divida.Cliente == null)
+    {
+        return BadRequest("Campos obrigatórios não podem ser nulos");
+    }
+
+    try
+    {
+                return Ok(divida);   
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, $"Erro interno: {ex.Message}");
+    }
+}
+
     }
 }

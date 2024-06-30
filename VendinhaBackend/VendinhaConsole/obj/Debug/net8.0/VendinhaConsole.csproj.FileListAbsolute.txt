@@ -34,3 +34,4 @@ C:\Users\guilb\Projects\Vendinha\VendinhaBackend\VendinhaConsole\bin\Debug\net8.
 C:\Users\guilb\Projects\Vendinha\VendinhaBackend\VendinhaConsole\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\guilb\Projects\Vendinha\VendinhaBackend\VendinhaConsole\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\guilb\Projects\Vendinha\VendinhaBackend\VendinhaConsole\bin\Debug\net8.0\Npgsql.dll
+C:\Users\guilb\Projects\Vendinha\VendinhaBackend\VendinhaConsole\obj\Debug\net8.0\VendinhaConsole.sourcelink.json

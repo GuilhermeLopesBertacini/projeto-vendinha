@@ -1,4 +1,4 @@
-const URL_API = "https://localhost:7236";
+const URL_API = "http://localhost:5268";
 
 function listarClientes() {
     // PROMISE

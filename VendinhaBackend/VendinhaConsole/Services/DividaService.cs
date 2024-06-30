@@ -107,16 +107,6 @@ namespace VendinhaConsole.Services
 
     }
 
-    //public virtual List<Curso> ListarDto()
-    //{
-    //    using var sessao = session.OpenSession();
-    //    var cursos = sessao.Query<Curso>()
-    //        .Select(x => new CursoDto(x))
-    //        .OrderBy(c => c.Id)
-    //        .Take(4)
-    //        .ToList();
-    //    return cursos;
-    //}
 
     //public class DividaService2 : DividaService
     //{

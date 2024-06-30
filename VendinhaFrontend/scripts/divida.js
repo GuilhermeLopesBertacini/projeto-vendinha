@@ -13,9 +13,13 @@ function addDivida(evento) {
             .children
             .item(indice);
 
-        var [id, nome, descricao] =
+        var [id, valor, situacao, datacriacao, datapagamento, descricao] =
             nodeTr.children;
-        nome.innerHTML = dados.get("nome");
+        id.innerHTML = dados.get("id");
+        valor.innerHTML = dados.get("valor");
+        situacao.innerHTML = dados.get("situacao");
+        datacriacao.innerHTML = dados.get("datacriacao");
+        datapagamento.innerHTML = dados.get("datapagamento");
         descricao.innerHTML = dados.get("descricao");
         evento.target.reset();
         evento.target
@@ -32,7 +36,10 @@ function addDivida(evento) {
         var linha = `
             <tr>
                 <td>${contador++}</td>
-                <td>${dados.get("nome")}</td>
+                <td>${dados.get("valor")}</td>
+                <td>${dados.get("situacao")}</td>
+                <td>${dados.get("datacriacao")}</td>
+                <td>${dados.get("datapagamento")}</td>
                 <td>${dados.get("descricao")}</td>
             </tr>
             `;
@@ -97,11 +104,15 @@ function selecionar(evento) {
     var campoID = form.querySelector("input[name=id]");
     var campoSituacao = form.querySelector("input[name=situacao]");
     var campoValor = form.querySelector("input[name=valor]");
+    var campoDataCriacao = form.querySelector("input[name=datacriacao]");
+    var campoDataPagamento = form.querySelector("input[name=datapagamento]");
     var campoDescricao = form.querySelector("textarea[name=descricao]");
     var campoIndice = form.querySelector("input[name=index]");
 
     campoID.value = id.innerText;
     campoSituacao.value = situacao.innerText;
+    campoDataCriacao = datacriacao.innerText;
+    campoDataPagamento = datapagamento.innerText;
     campoValor.value = valor.innerText;
     campoDescricao.value = descricao.innerText;
     campoIndice.value = index;

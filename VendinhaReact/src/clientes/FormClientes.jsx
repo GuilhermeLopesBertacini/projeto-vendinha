@@ -17,21 +17,17 @@ export default function FormCliente() {
     // import re -> regular expression
     // using System.Text.RegularExpressions -> Regex
     const [cpf, setCpf] = useReducer((old, value) => {
-        var regex = /[0-9]+/g;
-        var digitos = value.replace(/[^0-9]+/g, "").substring(0, 11);
+    var digitos = value.replace(/[^0-9]+/g, "").substring(0, 11);
 
-        if (digitos.length <= 3) return digitos;
-        else if (digitos.length <= 6) {
-            return digitos.replace(/(\d{3})(\d+)/, "$1.$2");
-        }
-        else if (digitos.length <= 9) {
-            return digitos.replace(/(\d{3})(\d{3})(\d+)/, "$1.$2.$3");
-        }   
-        else {
-            return digitos.replace(/(\d{3})(\d{3})(\d{3})(\d+)/, "$1.$2.$3-$4");
-        }
-
-    }, "");
+    if (digitos.length <= 3) return digitos;
+    else if (digitos.length <= 6) {
+        return digitos.replace(/(\d{3})(\d+)/, "$1.$2");
+    } else if (digitos.length <= 9) {
+        return digitos.replace(/(\d{3})(\d{3})(\d+)/, "$1.$2.$3");
+    } else {
+        return digitos.replace(/(\d{3})(\d{3})(\d{3})(\d+)/, "$1.$2.$3-$4");
+    }
+}, '');
 
     const salvarCliente = async (evento) => {
         evento.preventDefault();
