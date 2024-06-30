@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dividas</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="/scripts/divida.js"></script>
+    <script type="text/javascript" src="/scripts/clienteApi.js"></script>
+    <script type="text/javascript" src="/scripts/dividaApi.js"></script>
+    <script type="text/javascript">
+        setTimeout(() => {
+            preencherTabela();
+        }, 500)
+    </script>
+</head>
+
+<body>
+    <a href="./index.html" target="_self">Voltar</a>
+    <h1>Dividas</h1>
+
+    <table id="table-dividas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Valor</th>
+                <th>Situacao</th>
+                <th>DataCriacao</th>
+                <th>DataPagamento</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody onclick="selecionar(event)">
+        </tbody>
+    </table>
+    <br>
+    <form onsubmit="criarDivida(event)">
+        <div class="formulario">
+            <div class="row">
+            <div class="input">
+                <label>ID do cliente:</label>
+                <textarea placeholder="ID do cliente" name="client_id"></textarea>
+                <span class="error"></span>
+            </div>
+            <div class="row">
+                <div class="input">
+                    <label>Valor:</label>
+                    <input value="PADRÃO" placeholder="Valor da dívida" type="number" min="1" name="valor">
+                    <span class="error"></span>
+                </div>
+
+            <select name="situacao">
+                <option value="0">Não Paga</option>
+                <option value="1">Paga</option>
+            </select>
+            <div class="row">
+                <div class="input">
+                    <label>Data de criação:</label>
+                    <input placeholder="DataCriacao" type="date" name="DataCriacao">
+                    <span class="error"></span>
+                </div>
+                <div class="row">
+                    <div class="input">
+                        <label>Data de pagamento:</label>
+                        <input placeholder="DataPagamento" type="date" name="DataPagamento">
+                        <span class="error"></span>
+                    </div>
+            <div class="input">
+                <label>Descrição:</label>
+                <textarea placeholder="Descrição da dívida" name="descricao"></textarea>
+                <span class="error"></span>
+            </div>
+            <input name="index" type="hidden" value="-1">
+
+        </div>
+        <button type="submit">Nova Divida</button>
+    </form>
+</body>
+
+</html>

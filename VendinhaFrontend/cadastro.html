@@ -1,0 +1,35 @@
+<a href="./index.html" target="_self">Voltar</a>
+<h1>Cadastrar Cliente</h1>
+<form onsubmit="criarCliente(event)">
+    <div class="formulario">
+        <div class="row">
+            <div class="input">
+                <label>Nome:</label>
+                <input placeholder="Nome" type="text" name="nome">
+                <span class="error"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input">
+                <label>CPF:</label>
+                <input placeholder="11122233344" type="number" name="cpf">
+                <span class="error"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input">
+                <label>Data nascimento:</label>
+                <input placeholder="dataNascimento" type="date" name="dataNascimento">
+                <span class="error"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input">
+                <label>Email:</label>
+                <input placeholder="email" type="email" name="email">
+                <span class="error"></span>
+            </div>
+        </div>
+    </div>
+    <button type="submit">Cadastrar</button>
+</form>

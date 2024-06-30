@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vendinha</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="text/javascript" src="/scripts/novo.js"></script>
+    <script type="text/javascript" src="/scripts/router.js"></script>
+    <script type="text/javascript" src="/scripts/clienteApi.js"></script>
+    <script type="text/javascript">
+        setTimeout(() => checkRoute(), 200);
+        if (window.location.pathname == "/clientes") {
+            setTimeout(() => carregarAlunos(), 300);
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/clientes/criar">Novo cliente</a></li>
+        </ul>
+    </nav>
+    <div id="conteudo"></div>
+</body>
+
+</html>
